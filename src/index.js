@@ -181,12 +181,13 @@ async function run() {
   const availableCount = availableDomains.length;
   const durationMs = Date.now() - startTime;
 
-  console.log('\n' + chalk.bold('Summary'));
-  console.log(`Checked: ${checked}`);
-  console.log(`Taken: ${taken}`);
-  console.log(`Available: ${availableCount}`);
-  console.log(`Available domains: ${availableCount ? availableDomains.join(', ') : 'None'}`);
-  console.log(`Runtime: ${formatDuration(durationMs)}`);
+  console.log('\n' + chalk.bold.yellow('Summary'));
+  console.log(`${chalk.white('Checked:')} ${chalk.cyan(checked)}`);
+  console.log(`${chalk.white('Taken:')} ${chalk.red(taken)}`);
+  console.log(`${chalk.white('Available:')} ${chalk.green(availableCount)}`);
+  const availableList = availableCount ? availableDomains.join(', ') : 'None';
+  console.log(`${chalk.white('Available domains:')} ${availableCount ? chalk.green(availableList) : chalk.gray(availableList)}`);
+  console.log(`${chalk.white('Runtime:')} ${chalk.magenta(formatDuration(durationMs))}`);
 }
 
 run().catch((err) => {
