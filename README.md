@@ -1,6 +1,6 @@
-# de-domain-checker
+# bulk-domain-checker
 
-Simple Node.js terminal app to bulk-check .de domain availability by querying `whois.denic.de`.
+Simple Node.js terminal app to bulk-check `.de`, `.net`, `.eu`, and `.com` domain availability via WHOIS.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ cp config.example.json config.json
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `length` | integer (2-63) | Total length of the domain label (without `.de`). |
+| `length` | integer (2-63) | Total length of the domain label (without the TLD). |
 | `prefix` | string | Lowercase letters that must appear at the start. |
 | `suffix` | string | Lowercase letters that must appear at the end. |
 | `intervalMs` | integer (optional) | Delay between lookups in ms. Defaults to 500. |

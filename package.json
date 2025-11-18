@@ -1,10 +1,10 @@
 {
-  "name": "de-domain-checker",
+  "name": "bulk-domain-checker",
   "version": "1.0.0",
-  "description": "Simple CLI to bulk-check .de domain availability via DENIC whois",
+  "description": "Simple CLI to bulk-check .de, .net, .eu, and .com domain availability via WHOIS",
   "type": "module",
   "bin": {
-    "de-domain-checker": "src/index.js"
+    "bulk-domain-checker": "src/index.js"
   },
   "main": "src/index.js",
   "scripts": {
@@ -14,7 +14,10 @@
     "domain",
     "whois",
     ".de",
-    "denic"
+    ".net",
+    ".eu",
+    ".com",
+    "availability"
   ],
   "author": "Simon Hofmann",
   "license": "MIT",
